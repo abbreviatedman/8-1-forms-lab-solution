@@ -20,12 +20,12 @@ class Form extends React.Component {
       !this.state.values ||
       this.state.values.split(",").some((num) => isNaN(num))
     ) {
-      this.props.handleSubmit(this.state.calculation, "a");
+      this.props.afterSubmit(this.state.calculation, "a");
 
       return;
     }
 
-    this.props.handleSubmit(this.state.calculation, this.state.values);
+    this.props.afterSubmit(this.state.calculation, this.state.values);
     if (this.state.calculation) {
       this.setState({ values: "" });
     }

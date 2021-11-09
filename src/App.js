@@ -57,7 +57,7 @@ class App extends React.Component {
     return (
       <main>
         <p>Enter each number in the array, separated by a ','</p>
-        <Form handleSubmit={this.calculate} error={this.state.error} />
+        <Form afterSubmit={this.calculate} error={this.state.error} />
         <section id="result">
           <p>{this.state.result}</p>
         </section>
